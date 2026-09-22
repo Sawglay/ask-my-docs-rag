@@ -41,3 +41,20 @@ python query_data.py "What do these documents say about the main topic?"
 ```
 
 Create your own `requirements.txt` to match the versions used by your implementation. The video tutorial uses older dependency versions, so its installation steps may need updates.
+
+## Next improvements
+
+- [ ] Add a small set of Markdown documents that may be shared publicly.
+- [ ] Show the exact retrieved passage beside each source file name.
+- [ ] Return a clear “I could not find that in the documents” message when retrieval is weak.
+- [ ] Add a small evaluation set of questions and expected source documents.
+- [ ] Add PDF support or a simple web interface after the CLI works.
+
+## Data and API key safety
+
+Do not commit an API key, private notes, or documents you do not have permission to publish. This design sends document passages to an external AI API for embeddings and answers. Use sample or approved documents when testing a public repository.
+
+## Credits
+
+This learning project is inspired by Pixegami’s [RAG + LangChain Python tutorial](https://www.youtube.com/watch?v=tcqEUSNCn8I) and its [companion repository](https://github.com/pixegami/langchain-rag-tutorial). Credit belongs to the tutorial author for the teaching material. Document the parts you build or change as the project grows.
+
