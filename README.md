@@ -19,3 +19,25 @@ Make a small, understandable document assistant that can answer questions about 
 **Planned stack:** Python, LangChain, Chroma, and the OpenAI API.
 
 ## Planned project layout
+
+
+## Getting started after implementation
+
+These commands assume the planned files above exist. In **Windows PowerShell**, from the repository root:
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python -m pip install "unstructured[md]"
+```
+
+Add one or more Markdown files directly inside `data/books/`. Set your API key for the current PowerShell session, then build the index and ask a question:
+
+```powershell
+$env:OPENAI_API_KEY = "your_api_key_here"
+python create_database.py
+python query_data.py "What do these documents say about the main topic?"
+```
+
+Create your own `requirements.txt` to match the versions used by your implementation. The video tutorial uses older dependency versions, so its installation steps may need updates.
